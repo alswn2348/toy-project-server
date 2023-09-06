@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
@@ -71,3 +71,72 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+# nestjs-board-app
+
+## 생성 cli
+
+```bash
+
+#모듈
+$ nest g module {Name}
+
+#컨트롤러
+$ nest g controller {Name} --no-spec
+--no-spec : 테스트를위한 코드 생성하지 않음
+
+#서비스
+$ nest g service {Name} --no-spec
+
+#pipe 필요한 모듈 class-validator , class-transformer
+$ npm install class-validator class-transformer --save
+
+```
+## 유용한 모듈(라이브러리)
+```bash
+
+#pipe 관련 모듈 class-validator , class-transformer
+$ npm install class-validator class-transformer --save
+```
+
+## typeORM 관련 모듈(라이브러리)
+```bash
+#typeORM 관련 모듈 pg, typeorm, @nestjs/typeorm
+$ npm install pg typeorm @nestjs/typeorm --save
+
+```
+## typeORM 연결하기
+1. typeORM 설정파일 생성
+2. typeORM 설정파일 작성
+3. 루트 Module에서 Import 합니다.
+## 도커
+```bash
+// 도커 이미지 생성
+
+# docker build -t <이미지 이름> .
+$ docker build -t welcome-to-docker .
+
+// 도커 컨테이너 생성
+
+# docker run --name <컨테이너 이름> -d -p <호스트 포트>:<컨테이너 포트> <사용할 이미지>
+$ docker run --name docker-exercise-container -d -p 8000:8000 welcome-to-docker
+
+--name : 없으면 랜덤 생성
+-d : detached 백그라운드 실행
+-p : 포트 매핑
+```
+
+## aws
+
+```bash
+
+// aws ec2 접속하기
+$ chmod 700 {키파일}
+$ ssh -i {키파일} ubuntu@{ip 주소}
+
+$ cd nest-sever-prod
+$ git pull
+
+//pm2 무중단 배포
+$ npm run pm2:start:prod
+```
+`test`
